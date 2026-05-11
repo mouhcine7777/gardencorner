@@ -269,6 +269,7 @@ export default function GardenEatalyPage() {
             <p style={{
               fontFamily: "Georgia, serif",
               fontSize: "0.7rem",
+              color: "white",
               letterSpacing: "0.3em",
               textTransform: "uppercase",
               marginBottom: "0.75rem",
@@ -295,6 +296,7 @@ export default function GardenEatalyPage() {
                 <span key={tag} style={{
                   fontFamily: "Georgia, serif",
                   fontSize: "0.65rem",
+                  color: "white",
                   letterSpacing: "0.18em",
                   textTransform: "uppercase",
                 }}>

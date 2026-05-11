@@ -160,6 +160,8 @@ export default function GardenHomePage() {
               letterSpacing: "0.3em",
               textTransform: "uppercase",
               marginBottom: "0.75rem",
+              color: "white",
+
             }}>
               The Garden Corner
             </p>
@@ -186,6 +188,7 @@ export default function GardenHomePage() {
                   fontSize: "0.65rem",
                   letterSpacing: "0.18em",
                   textTransform: "uppercase",
+                  color: "white",
                 }}>
                   {tag}
                 </span>
