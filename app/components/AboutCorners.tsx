@@ -9,9 +9,10 @@ const rows = [
     id: "brunch",
     name: "Garden Brunch",
     logo: "/logos/garden-brunch-logo.png",
+
     image: "/gardenbrunch.jpg",
-    tagline: "Le brunch du dimanche",
-    imageCaption: "Une matinée de saveurs",
+    tagline: "Du premier café au dernier plat",
+    imageCaption: "Des saveurs du matin au soir",
     href: "/brunch",
     logoLeft: false,
     whiteFilter: false,
@@ -20,9 +21,10 @@ const rows = [
     id: "bakes",
     name: "Garden Bakes",
     logo: "/logos/garden-bakes-logo.png",
+
     image: "/gardenbakes.jpg",
     tagline: "Pâtisseries & viennoiseries maison",
-    imageCaption: "L'art de la pâtisserie",
+    imageCaption: "L'art de la pâtisserie artisanale",
     href: "/bakes",
     logoLeft: true,
     whiteFilter: false,
@@ -31,6 +33,7 @@ const rows = [
     id: "eataly",
     name: "Garden Eataly",
     logo: "/logos/garden-eataly-logo.png",
+
     image: "/gardeneataly.jpg",
     tagline: "Saveurs italiennes & méditerranéennes",
     imageCaption: "La dolce vita à Casablanca",
@@ -42,6 +45,7 @@ const rows = [
     id: "home",
     name: "Garden Home",
     logo: "/logos/garden-home-logo.png",
+
     image: "/gardenhome.jpg",
     tagline: "Art de vivre & décoration",
     imageCaption: "Un intérieur qui vous ressemble",
@@ -228,22 +232,7 @@ function Row({ row }: { row: (typeof rows)[0] }) {
                 "linear-gradient(to top, rgba(26,46,30,0.80) 0%, rgba(0,0,0,0.1) 60%, transparent 100%)",
             }}
           />
-          {/* Logo overlay on mobile */}
-          <div className="absolute top-0 left-0 right-0 flex justify-center pt-5">
-            <Image
-              src={row.logo}
-              alt={row.name}
-              width={120}
-              height={55}
-              className="object-contain"
-              style={{
-                filter: "brightness(0) invert(1)",
-                opacity: 0.9,
-                maxHeight: "50px",
-                width: "auto",
-              }}
-            />
-          </div>
+
           <div className="absolute bottom-0 left-0 p-4">
             <p
               className="text-white/50 text-xs uppercase tracking-widest mb-1"
