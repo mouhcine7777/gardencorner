@@ -1,18 +1,19 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import Image from "next/image";
 import StickyMenu from "../../components/StickyMenu";
 import Footer from "../../components/Footer";
 
 // ─── Gallery images ────────────────────────────────────────────────────────────
 const photos = [
-  { src: "/nostalgia/photo-1.jpg", alt: "Nostalgia Lovers – scène" },
-  { src: "/nostalgia/photo-2.jpg", alt: "Nostalgia Lovers – public" },
-  { src: "/nostalgia/photo-3.jpg", alt: "Nostalgia Lovers – lumières" },
-  { src: "/nostalgia/photo-4.jpg", alt: "Nostalgia Lovers – artiste" },
-  { src: "/nostalgia/photo-5.jpg", alt: "Nostalgia Lovers – ambiance" },
-  { src: "/nostalgia/photo-6.jpg", alt: "Nostalgia Lovers – festival" },
+  { src: "/fanzone/photo-1.jpg", alt: "Fanzone Arena – ambiance" },
+  { src: "/fanzone/photo-2.jpg", alt: "Fanzone Arena – écran géant" },
+  { src: "/fanzone/photo-3.jpg", alt: "Fanzone Arena – supporters" },
+  { src: "/fanzone/photo-4.jpg", alt: "Fanzone Arena – célébration" },
+  { src: "/fanzone/photo-5.jpg", alt: "Fanzone Arena – foule" },
+  { src: "/fanzone/photo-6.jpg", alt: "Fanzone Arena – nuit" },
+  { src: "/fanzone/photo-7.jpg", alt: "Fanzone Arena – nuit" },
+  { src: "/fanzone/photo-8.jpg", alt: "Fanzone Arena – nuit" },
 ];
 
 // ─── Auto-scrolling infinite strip ────────────────────────────────────────────
@@ -68,8 +69,9 @@ function ImageSlider() {
   );
 }
 
+
 // ─── Page ──────────────────────────────────────────────────────────────────────
-export default function NostalgiaLoversPage() {
+export default function FanzonePage() {
   return (
     <>
       <StickyMenu />
@@ -78,21 +80,20 @@ export default function NostalgiaLoversPage() {
         {/* ── HERO ──────────────────────────────────────────────────────────── */}
         <section style={{ position: "relative", height: "clamp(420px, 60vw, 700px)", overflow: "hidden" }}>
           <img
-            src="/nostalgialovers.jpg"
-            alt="Nostalgia Lovers"
+            src="/fanzone/photo-2.jpg"
+            alt="Fanzone Arena"
             style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }}
           />
-          {/* Multi-layer gradient */}
+          {/* Multi-layer gradient — deeper, more dramatic for a football mood */}
           <div style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(to bottom, rgba(26,46,30,0.3) 0%, rgba(26,46,30,0.1) 40%, rgba(26,46,30,0.85) 100%)",
+            background: "linear-gradient(to bottom, rgba(10,22,40,0.35) 0%, rgba(10,22,40,0.1) 35%, rgba(10,22,40,0.88) 100%)",
           }} />
-          {/* Subtle vignette sides */}
           <div style={{
             position: "absolute",
             inset: 0,
-            background: "radial-gradient(ellipse at center, transparent 50%, rgba(26,46,30,0.4) 100%)",
+            background: "radial-gradient(ellipse at center, transparent 45%, rgba(10,22,40,0.45) 100%)",
           }} />
 
           {/* Hero text */}
@@ -126,7 +127,7 @@ export default function NostalgiaLoversPage() {
               textTransform: "uppercase",
               marginBottom: "0.5rem",
             }}>
-              Nostalgia
+              Fanzone
             </h1>
             <h1 style={{
               fontFamily: "Georgia, 'Times New Roman', serif",
@@ -138,7 +139,7 @@ export default function NostalgiaLoversPage() {
               textTransform: "uppercase",
               marginBottom: "1.5rem",
             }}>
-              Lovers
+              Arena
             </h1>
             <p style={{
               fontFamily: "Georgia, serif",
@@ -147,7 +148,7 @@ export default function NostalgiaLoversPage() {
               letterSpacing: "0.1em",
               fontStyle: "italic",
             }}>
-              Les souvenirs des années 80/90, réunis en un seul festival
+              La Coupe d'Afrique des Nations 2025, vécue ensemble au Vélodrome
             </p>
           </div>
         </section>
@@ -178,7 +179,7 @@ export default function NostalgiaLoversPage() {
               textAlign: "center",
               letterSpacing: "0.01em",
             }}>
-              Le Vélodrome de Casablanca plonge dans l'atmosphère inoubliable d'une époque qui a marqué toute une génération avec le <em style={{ color: "#b4caad", fontStyle: "italic" }}>Nostalgia Lovers Festival</em>. Le temps d'une soirée, les souvenirs des années 80 et 90 reprennent vie à travers une expérience immersive, où chaque note, chaque lumière et chaque performance ravivent l'émotion des grands moments d'hier.
+              Pour la <em style={{ color: "#b4caad", fontStyle: "italic" }}>Coupe d'Afrique des Nations 2025</em>, Garden Corner a transformé le Vélodrome de Casablanca en une véritable arène de supporters. Soir après soir, des milliers de fans se sont retrouvés pour vivre les matchs ensemble — dans une atmosphère électrique, entre cris de joie, tambours et étendards aux couleurs du continent.
             </p>
 
             <div style={{ height: "2rem" }} />
@@ -192,7 +193,7 @@ export default function NostalgiaLoversPage() {
               textAlign: "center",
               letterSpacing: "0.01em",
             }}>
-              Entre tubes cultes et icônes internationales, le festival invite le public à revivre ces décennies emblématiques, à chanter, danser et se reconnecter à une époque où la musique créait des souvenirs intemporels. Une véritable parenthèse nostalgique, où le passé se célèbre au présent.
+              Écrans géants, animations live, restauration et ambiance festive : la Fanzone Arena a offert bien plus qu'un simple visionnage. C'était un rendez-vous de communion, où chaque but devenait une fête partagée et chaque match, un souvenir gravé dans la mémoire collective de Casablanca.
             </p>
 
             {/* Decorative bottom */}
@@ -207,9 +208,42 @@ export default function NostalgiaLoversPage() {
           </div>
         </section>
 
-        {/* ── GALLERY — desktop masonry, mobile strip ───────────────────────── */}
-        <section style={{ backgroundColor: "#f4efe4", padding: "clamp(3rem, 5vw, 5rem) 0" }}>
-          {/* Section header */}
+        {/* ── HIGHLIGHT QUOTE ───────────────────────────────────────────────── */}
+        <section style={{
+          backgroundColor: "#f4efe4",
+          padding: "clamp(3.5rem, 6vw, 6rem) clamp(1.5rem, 6vw, 5rem)",
+          textAlign: "center",
+        }}>
+          <div style={{ maxWidth: "680px", margin: "0 auto" }}>
+            <svg width="28" height="20" viewBox="0 0 28 20" fill="none" style={{ marginBottom: "1.5rem", opacity: 0.35 }}>
+              <path d="M0 20V12C0 5.373 4.477 1.12 13.43 0L14 2C9.477 2.747 7.213 5.12 7.213 8.667H12V20H0ZM16 20V12C16 5.373 20.477 1.12 29.43 0L30 2C25.477 2.747 23.213 5.12 23.213 8.667H28V20H16Z" fill="#3f6e4b"/>
+            </svg>
+            <p style={{
+              fontFamily: "Georgia, 'Times New Roman', serif",
+              fontSize: "clamp(1.1rem, 2vw, 1.45rem)",
+              fontWeight: 400,
+              color: "#1a2e1e",
+              lineHeight: 1.75,
+              fontStyle: "italic",
+              letterSpacing: "0.01em",
+            }}>
+              Le football unit. La Fanzone Arena en a fait la preuve — soirée après soirée, sous les étoiles de Casablanca.
+            </p>
+            <p style={{
+              fontFamily: "Georgia, serif",
+              fontSize: "0.65rem",
+              color: "#3f6e4b",
+              letterSpacing: "0.25em",
+              textTransform: "uppercase",
+              marginTop: "1.5rem",
+            }}>
+              Garden Corner — Can 2025
+            </p>
+          </div>
+        </section>
+
+        {/* ── GALLERY ───────────────────────────────────────────────────────── */}
+        <section style={{ backgroundColor: "#f4efe4", padding: "clamp(1rem, 2vw, 2rem) 0 clamp(3rem, 5vw, 5rem)" }}>
           <div style={{
             padding: "0 clamp(1.5rem, 5vw, 4rem)",
             marginBottom: "2.5rem",
@@ -237,7 +271,7 @@ export default function NostalgiaLoversPage() {
               lineHeight: 1.2,
               marginTop: "0.75rem",
             }}>
-              Revivez la soirée
+              Revivez la Fanzone
             </h2>
           </div>
 

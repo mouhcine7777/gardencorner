@@ -24,8 +24,8 @@ const events = [
     title: "Fanzone Arena",
     date: "2025",
     tag: "Sport & Fun",
-    image: "https://images.unsplash.com/photo-1459865264687-595d652de67e?w=1400&q=90",
-    href: "/evenements/fanzone-arena",
+    image: "/fanzone/main.jpg",
+    href: "/evenements/fanzone",
   },
 ];
 
