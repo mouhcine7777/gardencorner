@@ -50,7 +50,7 @@ const features = [
     tag: "Dessert italien",
     title: "La finale parfaite",
     body: "Impossible de terminer sans une touche sucrée italienne. Textures fondantes, douceurs crémeuses et recettes incontournables viennent apporter la finale parfaite à votre expérience chez Garden Eataly.",
-    image: "/eataly/feature-fromage.jpg",
+    image: "/eataly/feature-desserts.jpg",
     imageAlt: "Dessert italien Garden Eataly",
     imageRight: false,
   },
