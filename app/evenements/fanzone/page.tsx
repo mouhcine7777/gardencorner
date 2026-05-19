@@ -179,7 +179,7 @@ export default function FanzonePage() {
               textAlign: "center",
               letterSpacing: "0.01em",
             }}>
-              Pour la <em style={{ color: "#b4caad", fontStyle: "italic" }}>Coupe d'Afrique des Nations 2025</em>, Garden Corner a transformé le Vélodrome de Casablanca en une véritable arène de supporters. Soir après soir, des milliers de fans se sont retrouvés pour vivre les matchs ensemble — dans une atmosphère électrique, entre cris de joie, tambours et étendards aux couleurs du continent.
+              Pour la <em style={{ color: "#b4caad", fontStyle: "italic" }}>Coupe d'Afrique des Nations 2025</em>, Garden Corner a transformé le Vélodrome de Casablanca en une véritable arène de supporters. Soir après soir, des milliers de fans se sont retrouvés pour vivre les matchs ensemble dans une atmosphère électrique, entre cris de joie, tambours et étendards aux couleurs du continent.
             </p>
 
             <div style={{ height: "2rem" }} />
@@ -227,7 +227,7 @@ export default function FanzonePage() {
               fontStyle: "italic",
               letterSpacing: "0.01em",
             }}>
-              Le football unit. La Fanzone Arena en a fait la preuve — soirée après soirée, sous les étoiles de Casablanca.
+              Le football unit. La Fanzone Arena en a fait la preuve soirée après soirée, sous les étoiles de Casablanca.
             </p>
             <p style={{
               fontFamily: "Georgia, serif",
