@@ -18,6 +18,7 @@ const navItems = [
       { label: "Fanzone Arena", href: "/evenements/fanzone" },
     ],
   },
+  { label: "Contact", href: "mailto:contact@sunsethospitality.ma" },
 ];
 
 export default function Header() {
@@ -61,9 +62,9 @@ export default function Header() {
             <Image
               src="/logo.png"
               alt="Garden Corner"
-              width={120}
-              height={52}
-              className="h-12 w-auto object-contain transition-all duration-300"
+              width={150}
+              height={65}
+              className="h-16 w-auto object-contain transition-all duration-300"
               style={{
                 filter: scrolled ? "none" : "brightness(0) invert(1)",
               }}
@@ -87,7 +88,7 @@ export default function Header() {
                     className="relative px-4 py-2 group flex items-center gap-1 transition-colors duration-200 cursor-pointer"
                     style={{
                       fontFamily: "Georgia, 'Times New Roman', serif",
-                      fontSize: "0.8rem",
+                      fontSize: "0.95rem",
                       letterSpacing: "0.06em",
                       color: scrolled ? "#3f6e4b" : "rgba(255,255,255,0.88)",
                       fontWeight: 400,
@@ -174,7 +175,7 @@ export default function Header() {
                           display: "block",
                           padding: "10px 20px",
                           fontFamily: "Georgia, 'Times New Roman', serif",
-                          fontSize: "0.78rem",
+                          fontSize: "0.9rem",
                           letterSpacing: "0.05em",
                           color: "#3f6e4b",
                           fontWeight: 400,
@@ -207,7 +208,7 @@ export default function Header() {
                   className="relative px-4 py-2 group transition-colors duration-200"
                   style={{
                     fontFamily: "Georgia, 'Times New Roman', serif",
-                    fontSize: "0.8rem",
+                    fontSize: "0.95rem",
                     letterSpacing: "0.06em",
                     color: scrolled ? "#3f6e4b" : "rgba(255,255,255,0.88)",
                     fontWeight: 400,

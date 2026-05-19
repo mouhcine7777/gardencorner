@@ -237,7 +237,7 @@ export default function NostalgiaLoversPage() {
               lineHeight: 1.2,
               marginTop: "0.75rem",
             }}>
-              Revivez la soirée
+              Revivez l'énérgie de nos soirées!
             </h2>
           </div>
 

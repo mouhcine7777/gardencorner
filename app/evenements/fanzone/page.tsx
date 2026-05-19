@@ -271,7 +271,7 @@ export default function FanzonePage() {
               lineHeight: 1.2,
               marginTop: "0.75rem",
             }}>
-              Revivez la Fanzone
+              Vibrez, partagez , soutenez!
             </h2>
           </div>
 

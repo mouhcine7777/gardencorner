@@ -236,7 +236,7 @@ export default function MagicGardenPage() {
               lineHeight: 1.2,
               marginTop: "0.75rem",
             }}>
-              Revivez la magie
+              Entrez dans notre monde féerique!
             </h2>
           </div>
 

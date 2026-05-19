@@ -112,7 +112,7 @@ export default function HeroSection() {
             animationDelay: "0.45s",
           }}
         >
-          Un univers pensé pour vivre, partager<br />et profiter pleinement.
+          Trois restaurants, trois façons de se régaler du matin au soir.
         </p>
       </div>
 
@@ -139,15 +139,33 @@ export default function HeroSection() {
         <span
           style={{
             fontFamily: "Georgia, serif",
-            fontSize: "0.6rem",
-            color: "rgba(244,239,228,0.35)",
-            letterSpacing: "0.25em",
+            fontSize: "0.75rem",
+            color: "rgba(244,239,228,0.85)",
+            letterSpacing: "0.28em",
             textTransform: "uppercase",
           }}
         >
           Découvrir
         </span>
+
         <div className="scroll-line" />
+
+        {/* Animated arrow down */}
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          className="arrow-bounce"
+        >
+          <path
+            d="M2 5L8 11L14 5"
+            stroke="rgba(244,239,228,0.85)"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       </div>
 
       <style jsx>{`
@@ -169,6 +187,14 @@ export default function HeroSection() {
           height: 40px;
           background: linear-gradient(to bottom, rgba(180,202,173,0.6), transparent);
           animation: scroll-drop 1.8s ease infinite;
+        }
+
+        @keyframes arrow-bounce {
+          0%, 100% { transform: translateY(0);   opacity: 0.85; }
+          50%       { transform: translateY(5px); opacity: 1; }
+        }
+        .arrow-bounce {
+          animation: arrow-bounce 1.8s ease infinite;
         }
       `}</style>
     </section>
