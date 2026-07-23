@@ -6,39 +6,23 @@ import Link from "next/link";
 
 const links = [
   { label: "Garden Brunch", href: "/brunch" },
-  { label: "Garden Bakes", href: "/bakes" },
+  { label: "Garden Bake's", href: "/bakes" },
   { label: "Garden Eataly", href: "/eataly" },
   { label: "Garden Home", href: "/home" },
   { label: "Évènements", href: "/evenements" },
 ];
 
+const INSTAGRAM_URL = "https://www.instagram.com/govelodrome.casablanca/";
+
 const socials = [
   {
     label: "Instagram",
-    href: "https://instagram.com",
+    href: INSTAGRAM_URL,
     icon: (
       <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
         <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="1.5" />
         <circle cx="12" cy="12" r="4.5" stroke="currentColor" strokeWidth="1.5" />
         <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
-      </svg>
-    ),
-  },
-  {
-    label: "Facebook",
-    href: "https://facebook.com",
-    icon: (
-      <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
-        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    label: "TikTok",
-    href: "https://tiktok.com",
-    icon: (
-      <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
-        <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
   },
@@ -63,14 +47,22 @@ export default function Footer() {
         <div>
           {/* Logo */}
           <div className="mb-10">
-            <Image
-              src="/logo.png"
-              alt="Garden Corner"
-              width={140}
-              height={60}
-              className="object-contain"
-              style={{ opacity: 0.9, maxHeight: "56px", width: "auto" }}
-            />
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Garden Corner sur Instagram"
+              className="inline-block"
+            >
+              <Image
+                src="/logo.png"
+                alt="Garden Corner"
+                width={140}
+                height={60}
+                className="object-contain"
+                style={{ opacity: 0.9, maxHeight: "56px", width: "auto" }}
+              />
+            </a>
           </div>
 
           {/* Tagline */}

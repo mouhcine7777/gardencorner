@@ -14,18 +14,20 @@ const rows = [
     tagline: "Du premier café au dernier plat",
     imageCaption: "Des saveurs du matin au soir",
     href: "/brunch",
+    cta: "Découvrir",
     logoLeft: false,
     whiteFilter: false,
   },
   {
     id: "bakes",
-    name: "Garden Bakes",
+    name: "Garden Bake's",
     logo: "/logos/garden-bakes-logo.png",
 
     image: "/gardenbakes.jpg",
     tagline: "Pâtisseries & viennoiseries maison",
     imageCaption: "L'art de la pâtisserie artisanale",
     href: "/bakes",
+    cta: "Découvrir",
     logoLeft: true,
     whiteFilter: false,
   },
@@ -35,9 +37,11 @@ const rows = [
     logo: "/logos/garden-eataly-logo.png",
 
     image: "/gardeneataly.jpg",
-    tagline: "Saveurs italiennes & méditerranéennes",
+    tagline: "Pizzas au four à bois & pâtes fraîches",
     imageCaption: "La dolce vita à Casablanca",
     href: "/eataly",
+    // Descriptive anchor beats a generic "Découvrir" for internal-link SEO.
+    cta: "Notre pizzeria au four à bois",
     logoLeft: false,
     whiteFilter: false,
   },
@@ -50,6 +54,7 @@ const rows = [
     tagline: "Art de vivre & décoration",
     imageCaption: "Un intérieur qui vous ressemble",
     href: "/home",
+    cta: "Découvrir",
     logoLeft: true,
     whiteFilter: true,
   },
@@ -106,7 +111,7 @@ function Row({ row }: { row: (typeof rows)[0] }) {
           className="text-xs uppercase tracking-widest"
           style={{ color: "#b4caad", fontFamily: "Georgia, serif", letterSpacing: "0.2em" }}
         >
-          Découvrir
+          {row.cta}
         </span>
         <svg width="14" height="14" fill="none" viewBox="0 0 14 14">
           <path
@@ -195,7 +200,7 @@ function Row({ row }: { row: (typeof rows)[0] }) {
           className="text-xs uppercase tracking-widest"
           style={{ color: "#b4caad", fontFamily: "Georgia, serif", letterSpacing: "0.2em" }}
         >
-          Découvrir
+          {row.cta}
         </span>
         <svg width="14" height="14" fill="none" viewBox="0 0 14 14">
           <path
@@ -252,7 +257,7 @@ function Row({ row }: { row: (typeof rows)[0] }) {
               className="text-xs uppercase tracking-widest"
               style={{ color: "#b4caad", fontFamily: "Georgia, serif", letterSpacing: "0.2em" }}
             >
-              Découvrir
+              {row.cta}
             </span>
             <svg width="14" height="14" fill="none" viewBox="0 0 14 14">
               <path

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const navItems = [
   { label: "Garden Brunch", href: "/brunch" },
-  { label: "Garden Bakes", href: "/bakes" },
+  { label: "Garden Bake's", href: "/bakes" },
   { label: "Garden Eataly", href: "/eataly" },
   { label: "Garden Home", href: "/home" },
   {
@@ -21,8 +21,12 @@ const navItems = [
   { label: "Contact", href: "mailto:contact@sunsethospitality.ma" },
 ];
 
-export default function Header() {
+// `solid` forces the opaque, dark-on-cream styling from the first pixel. Pages that
+// open on a light background need it — the default transparent state renders the logo
+// and nav in white, which only reads over a dark hero image.
+export default function Header({ solid = false }: { solid?: boolean } = {}) {
   const [scrolled, setScrolled] = useState(false);
+  const opaque = solid || scrolled;
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileEventsOpen, setMobileEventsOpen] = useState(false);
@@ -49,10 +53,10 @@ export default function Header() {
       <header
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
         style={{
-          background: scrolled ? "rgba(244,239,228,0.96)" : "transparent",
-          backdropFilter: scrolled ? "blur(12px)" : "none",
-          borderBottom: scrolled ? "1px solid rgba(63,110,75,0.12)" : "none",
-          boxShadow: scrolled ? "0 2px 24px rgba(26,46,30,0.07)" : "none",
+          background: opaque ? "rgba(244,239,228,0.96)" : "transparent",
+          backdropFilter: opaque ? "blur(12px)" : "none",
+          borderBottom: opaque ? "1px solid rgba(63,110,75,0.12)" : "none",
+          boxShadow: opaque ? "0 2px 24px rgba(26,46,30,0.07)" : "none",
         }}
       >
         <div className="mx-auto max-w-7xl px-6 md:px-12 flex items-center justify-between h-20">
@@ -66,7 +70,7 @@ export default function Header() {
               height={65}
               className="h-16 w-auto object-contain transition-all duration-300"
               style={{
-                filter: scrolled ? "none" : "brightness(0) invert(1)",
+                filter: opaque ? "none" : "brightness(0) invert(1)",
               }}
               priority
             />
@@ -90,7 +94,7 @@ export default function Header() {
                       fontFamily: "Georgia, 'Times New Roman', serif",
                       fontSize: "0.95rem",
                       letterSpacing: "0.06em",
-                      color: scrolled ? "#3f6e4b" : "rgba(255,255,255,0.88)",
+                      color: opaque ? "#3f6e4b" : "rgba(255,255,255,0.88)",
                       fontWeight: 400,
                       background: "none",
                       border: "none",
@@ -113,7 +117,7 @@ export default function Header() {
                     >
                       <path
                         d="M1 1L5 5L9 1"
-                        stroke={scrolled ? "#3f6e4b" : "rgba(255,255,255,0.88)"}
+                        stroke={opaque ? "#3f6e4b" : "rgba(255,255,255,0.88)"}
                         strokeWidth="1.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -123,7 +127,7 @@ export default function Header() {
                     <span
                       className="absolute bottom-1 left-4 right-4 h-px origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
                       style={{
-                        backgroundColor: scrolled ? "#3f6e4b" : "#b4caad",
+                        backgroundColor: opaque ? "#3f6e4b" : "#b4caad",
                       }}
                     />
                   </button>
@@ -210,7 +214,7 @@ export default function Header() {
                     fontFamily: "Georgia, 'Times New Roman', serif",
                     fontSize: "0.95rem",
                     letterSpacing: "0.06em",
-                    color: scrolled ? "#3f6e4b" : "rgba(255,255,255,0.88)",
+                    color: opaque ? "#3f6e4b" : "rgba(255,255,255,0.88)",
                     fontWeight: 400,
                   }}
                 >
@@ -218,7 +222,7 @@ export default function Header() {
                   <span
                     className="absolute bottom-1 left-4 right-4 h-px origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
                     style={{
-                      backgroundColor: scrolled ? "#3f6e4b" : "#b4caad",
+                      backgroundColor: opaque ? "#3f6e4b" : "#b4caad",
                     }}
                   />
                 </Link>
@@ -237,7 +241,7 @@ export default function Header() {
                 key={i}
                 className="block h-px w-6 transition-all duration-300 origin-center"
                 style={{
-                  backgroundColor: scrolled ? "#3f6e4b" : "white",
+                  backgroundColor: opaque ? "#3f6e4b" : "white",
                   transform:
                     menuOpen && i === 0
                       ? "rotate(45deg) translate(3px, 3px)"
